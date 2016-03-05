@@ -5,7 +5,7 @@ module.exports = {
     entry: "./src/index.js",
     module: {
         loaders: [
-            { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/, query: {stage: 0} },
             { test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass') }
         ]
     },
