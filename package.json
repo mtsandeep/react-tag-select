@@ -6,9 +6,9 @@
   "scripts": {
     "build": "npm run build:lib && npm run build:umd && npm run build:umd:min",
     "build:lib": "babel src --out-dir lib",
-    "build:umd": "webpack src/index.js dist/ReactTagSelect.js --config webpack.development.js",
-    "build:umd:min": "webpack src/index.js dist/ReactTagSelect.min.js --config webpack.production.js",
-    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors --port 8090",
+    "build:umd": "webpack src/index.js dist/ReactTagSelect.js --config webpack.config.development.js",
+    "build:umd:min": "webpack src/index.js dist/ReactTagSelect.min.js --config webpack.config.production.js",
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.development.js --progress --colors --port 8090",
     "lint": "eslint src",
     "clean": "rimraf dist lib",
     "prepublish": "npm run lint && npm run test && npm run clean && npm run build",
