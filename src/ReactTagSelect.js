@@ -177,10 +177,10 @@ class ReactTagSelect extends Component {
     input.value = '';
     input.focus();
   }
-  handleSuggestionClick(i) {
+  handleSuggestionClick = (i) => {
     this.addTag(this.state.suggestions[i]);
   }
-  handleSuggestionHover(i) {
+  handleSuggestionHover = (i) => {
     this.setState({
       selectedIndex: i,
       selectionMode: true

@@ -5,3 +5,5 @@ npm-debug.log
 dist
 lib
 .sass-cache
+example/style.css
+example/style.css.map
