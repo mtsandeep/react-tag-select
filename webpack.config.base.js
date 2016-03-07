@@ -1,21 +1,28 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: "./src/index.js",
-    module: {
-        loaders: [
-            { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/, query: {stage: 0} },
-            { test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass') }
-        ]
-    },
-    externals: {
-        'react': 'React',
-        'react-dom': 'ReactDOM'
-    },
-    output: {
-        filename: "dist/ReactTagSelect.min.js",
-        libraryTarget: 'umd',
-        library: 'ReactTagSelect'
-    }
+  entry: './src/index.js',
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        loaders: ['babel'],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style', 'css!sass')
+      }
+    ]
+  },
+  externals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM'
+  },
+  output: {
+    filename: 'dist/ReactTagSelect.js',
+    libraryTarget: 'umd',
+    library: 'ReactTagSelect'
+  }
 };

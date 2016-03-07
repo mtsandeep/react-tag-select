@@ -1,8 +1,18 @@
-var webpack = require('webpack');
-var baseConfig = require('./webpack.config.base');
+const webpack = require('webpack');
+const baseConfig = require('./webpack.config.base');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var config = Object.create(baseConfig);
+const config = Object.create(baseConfig);
+//overwrite output to min
+config.output = {
+  filename: 'dist/ReactTagSelect.min.js',
+  libraryTarget: 'umd',
+  library: 'ReactTagSelect'
+};
 config.plugins = [
+  new ExtractTextPlugin('dist/style.css', {
+    allChunks: true
+  }),
   new webpack.optimize.OccurenceOrderPlugin(),
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify('production')
