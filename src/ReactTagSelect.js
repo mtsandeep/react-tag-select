@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Tag from './Tag';
 import Suggestions from './Suggestions';
 
-require('../scss/default.scss');
-
 // Constants
 const Keys = {
   ENTER: 13,

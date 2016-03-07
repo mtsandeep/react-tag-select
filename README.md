@@ -1,5 +1,8 @@
 ### react-tag-select
 
+### New notes
+I had to remove my call to `require('../scss/default.scss');` in my js entry as it's not conveniently possible to transpile a directory of js files and pull out the css at the same time as the ExtractTextPlugin works when bundling. Now my build step for distribution on npm will be 2 separate tasks. One compiling scss and copying and the other transpiling and copying the js files.
+
 *** This repo is a mash up of [react-select](https://github.com/JedWatson/react-select) and [react-tags](https://github.com/prakhar1989/react-tags). I've taken the styles from react-select and the functionality of react-tags.
 
 [![NPM](https://nodei.co/npm/react-tag-select.png?downloads=true)](https://www.npmjs.com/package/react-tag-select)
