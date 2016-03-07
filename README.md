@@ -260,5 +260,8 @@ The component is written in ES6 and uses [Webpack](http://webpack.github.io/) as
 ```
 npm install
 npm run dev
-python -m SimpleHTTPServer ### open in browser
+```
+### Running example
+```
+npm run example
 ```
