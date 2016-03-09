@@ -1,5 +1,5 @@
-/* Example Styles for React Tags*/
-.ReactTags__tags{
+/* ReactTags */
+.ReactTags{
   position: relative;
 
   // preferred box model
@@ -24,18 +24,18 @@
 }
 
 /* Styles for the input */
-.ReactTags__tagInput {
+.ReactTags-tagInput {
   display: inline-block;
   margin-left: 5px;
 }
 
-// .ReactTags__tagInput {
+// .ReactTags-tagInput {
 //     width: 200px;
 //     border-radius: 2px;
 //     display: inline-block;
 // }
 
-.ReactTags__tagInput input {
+.ReactTags-tagInput input {
   background: none transparent;
   border: 0 none;
   box-shadow: none;
@@ -55,7 +55,7 @@
 }
 
 /* Styles for selected tags */
-.ReactTags__selected {
+.ReactTags-selected {
   background-color: $select-input-bg;
   border-color: lighten($select-input-border-color, 5%) $select-input-border-color darken($select-input-border-color, 10%);
   border-radius: $select-input-border-radius;
@@ -71,7 +71,7 @@
   position: relative;
   width: 100%;
 }
-.ReactTags__selected span.ReactTags__tag {
+.ReactTags-selected span.ReactTags-tag {
   background-color: rgba(0, 126, 255, 0.08);
   border-radius: 2px;
   border: 1px solid rgba(0, 126, 255, 0.24);
@@ -92,7 +92,7 @@
     padding: 2px 5px;
   }
 }
-.ReactTags__selected a.ReactTags__remove {
+.ReactTags-selected a.ReactTags-remove {
   display: inline-block;
   vertical-align: middle;
 
@@ -113,7 +113,7 @@
 }
 
 /* Styles for suggestions */
-.ReactTags__suggestions-outer {
+.ReactTags-suggestions-outer {
   // Unfortunately, having both border-radius and allows scrolling using overflow defined on the same
   // element forces the browser to repaint on scroll.  However, if these definitions are split into an
   // outer and an inner element, the browser is able to optimize the scrolling behavior and does not
@@ -133,17 +133,17 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.ReactTags__suggestions {
+.ReactTags-suggestions {
   max-height: ($select-menu-max-height - 2px);
   overflow-y: auto;
 }
 
-.ReactTags__suggestions ul {
+.ReactTags-suggestions ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.ReactTags__suggestions li {
+.ReactTags-suggestions li {
   box-sizing: border-box;
   background-color: $select-option-bg;
   color: $select-option-color;
@@ -165,7 +165,7 @@
     cursor: default;
   }
 }
-.ReactTags__suggestions li mark {
+.ReactTags-suggestions li mark {
   text-decoration: underline;
   background: none;
   font-weight: 600;

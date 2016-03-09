@@ -37,8 +37,8 @@ class Suggestions extends Component {
     }
 
     return (
-      <div className="ReactTags__suggestions-outer">
-        <div className="ReactTags__suggestions">
+      <div className="ReactTags-suggestions-outer">
+        <div className="ReactTags-suggestions">
           <ul> { suggestions } </ul>
         </div>
       </div>

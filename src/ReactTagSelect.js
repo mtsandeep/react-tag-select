@@ -205,7 +205,7 @@ class ReactTagSelect extends Component {
     const placeholder = this.props.placeholder;
 
     const tagInput = !this.props.readOnly ? (
-      <div className="ReactTags__tagInput">
+      <div className="ReactTags-tagInput">
         <input
           ref="input"
           type="text"
@@ -217,8 +217,8 @@ class ReactTagSelect extends Component {
     ) : null;
 
     return (
-      <div className="ReactTags__tags">
-      <div className="ReactTags__selected">
+      <div className="ReactTags">
+      <div className="ReactTags-selected">
       {tagItems}
       {tagInput}
       </div>

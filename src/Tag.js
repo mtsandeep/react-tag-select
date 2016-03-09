@@ -30,8 +30,8 @@ class Tag extends Component {
     }
 
     return (
-      <span className="ReactTags__tag">
-        <RemoveComponent className="ReactTags__remove"
+      <span className="ReactTags-tag">
+        <RemoveComponent className="ReactTags-remove"
           onClick={this.props.onDelete} />
         <span className="ReactTags-label">{label}</span>
       </span>
