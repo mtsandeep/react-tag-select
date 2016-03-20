@@ -37,7 +37,7 @@ class ReactTagSelect extends Component {
     tags: [],
     suggestions: [],
     delimeters: [Keys.ENTER, Keys.TAB],
-    autofocus: true,
+    autofocus: false,
     allowDeleteFromEmptyInput: true,
     minQueryLength: 2,
     autocomplete: false,
